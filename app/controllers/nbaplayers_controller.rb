@@ -29,6 +29,13 @@ class NbaplayersController < ApplicationController
         redirect_to nbaplayer_path(@nbaplayer)
     end
 
+    def destroy 
+        @nbaplayer = Nbaplayer.find(params[:id])
+        @nbaplayer.destroy 
+
+        redirect_to nbaplayers_path, status: :see_other
+    end
+
     private 
 
     def nbaplayer_params

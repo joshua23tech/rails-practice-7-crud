@@ -23,3 +23,5 @@
 
 <h2>Finals Points Average</h2>
 <h3><%= "🧮 #{@nbaplayer.finals_pts_avg}" %></h3>
+
+<%= link_to "Delete", nbaplayer_path(@nbaplayer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
