@@ -1,0 +1,8 @@
+<h1>Welcome to the Pantheon of Champions</h1>
+
+<% @nbaplayers.each do |nbaplayer| %>
+    <h2><%= nbaplayer.name %></h2>
+    <h3><%= nbaplayer.position %></h3>
+    <h3><%= nbaplayer.team %></h3>
+    <h3><%= nbaplayer.conference %></h3>
+<% end %>
