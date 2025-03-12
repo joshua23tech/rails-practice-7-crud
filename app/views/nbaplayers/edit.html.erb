@@ -1,0 +1,23 @@
+<h1>Help our to update our records where needed!</h1>
+
+<%= form_with model: @nbaplayer do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :position %>
+  <%= f.text_field :position %>
+  <%= f.label :team %>
+  <%= f.text_field :team %>
+  <%= f.label :conference %>
+  <%= f.text_field :conference %>
+  <%= f.label :finals_appearances %>
+  <%= f.number_field :finals_appearances %>
+  <%= f.label :finals_won %>
+  <%= f.number_field :finals_won %>
+  <%= f.label :finals_lost %>
+  <%= f.number_field :finals_lost %>
+  <%= f.label :finals_mvps %>
+  <%= f.number_field :finals_mvps %>
+  <%= f.label :finals_pts_avg %>
+  <%= f.number_field :finals_pts_avg, step: 0.01 %>
+  <%= f.submit %>
+<% end %>

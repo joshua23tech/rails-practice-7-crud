@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   post "/nbaplayers", to: "nbaplayers#create"
   
   get "/nbaplayers/:id", to: "nbaplayers#show", as: :nbaplayer
+
+  get "/nbaplayers/:id/edit", to: "nbaplayers#edit"
+  patch "/nbaplayers/:id", to: "nbaplayers#update"
+  
 end

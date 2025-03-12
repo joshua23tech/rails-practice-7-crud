@@ -18,6 +18,17 @@ class NbaplayersController < ApplicationController
         @nbaplayer = Nbaplayer.find(params[:id])
     end
 
+    def edit 
+        @nbaplayer = Nbaplayer.find(params[:id])
+    end
+
+    def update 
+        @nbaplayer = Nbaplayer.find(params[:id])
+        @nbaplayer.update(nbaplayer_params)
+
+        redirect_to nbaplayer_path(@nbaplayer)
+    end
+
     private 
 
     def nbaplayer_params
